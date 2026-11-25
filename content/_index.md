@@ -4,6 +4,16 @@ menu = "main"
 weight = 1
 +++
 
-# Cupertinotes°
+Dirancang dengan presisi untuk kehidupan sehari-hari. Jelajahi lini produk, perbandingan spesifikasi, pembaruan sistem, dan catatan teknis seputar ekosistem Apple.
 
-Catatan, katalog, dan panduan lengkap seputar ekosistem produk Apple mulai dari iPhone, iPad, Mac, Apple Watch, Apple TV, hingga aksesori.
+* Store
+* Mac
+* iPad
+* iPhone
+* Watch
+* Vision
+* AirPods
+* Home
+* Entertainment
+* Accessories
+* Support

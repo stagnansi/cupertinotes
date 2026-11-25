@@ -4,31 +4,79 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <style>
   :root {
-    color-scheme: light;
+    color-scheme: light only;
     --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-display: 'InterDisplay', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-mono: 'IBM Plex Mono', monospace;
-    --link-color: #0066CC;
+    --background-color: #ffffff;
+    --heading-color: #1d1d1f;
+    --text-color: #1d1d1f;
+    --blockquote-color: #1d1d1f;
+    --link-color: #0071e3;
+    --visited-color: #0071e3;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      color-scheme: light;
+      color-scheme: light only;
+      --background-color: #ffffff;
+      --heading-color: #1d1d1f;
+      --text-color: #1d1d1f;
+      --blockquote-color: #1d1d1f;
+      --link-color: #0071e3;
+      --visited-color: #0071e3;
     }
-    html, body {
+    html, body, main, section, article, aside, header, footer {
       background-color: #ffffff !important;
-      color: #222222 !important;
+      color: #1d1d1f !important;
     }
   }
   body {
+    background-color: var(--background-color);
+    color: #1d1d1f;
     font-family: var(--font-main);
+    line-height: 1.47059;
+    letter-spacing: -0.022em;
+  }
+  p {
+    color: #1d1d1f;
+    line-height: 1.47059;
+    letter-spacing: -0.022em;
+  }
+  blockquote {
+    margin-left: 0;
+    margin-right: 0;
+    border-left: 1px solid #999;
+    padding-left: 20px;
+    font-style: italic;
+    color: #1d1d1f;
+    line-height: 1.47059;
+    letter-spacing: -0.022em;
+  }
+  h1, h2, h3, h4, h5, h6, header .title, header .title h2 {
+    font-family: var(--font-display);
+    color: #1d1d1f;
+    letter-spacing: -0.015em;
   }
   time, pre, code, kbd, samp {
     font-family: var(--font-mono);
   }
   a, a:visited {
-    color: var(--link-color);
+    color: #0071e3;
   }
   header .title, header nav, footer {
     -webkit-user-select: none;
     user-select: none;
+  }
+  ul:not(.blog-posts) {
+    list-style: none;
+    padding-left: 1.25em;
+  }
+  ul:not(.blog-posts) > li {
+    position: relative;
+  }
+  ul:not(.blog-posts) > li::before {
+    content: "\2192";
+    position: absolute;
+    left: -1.25em;
   }
 </style>
