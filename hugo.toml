@@ -1,0 +1,29 @@
+baseURL = "https://cupertinotes.pages.dev/"
+locale = "id-id"
+defaultContentLanguage = "id"
+title = "Cupertinotes°"
+theme = "hugo-bearblog"
+author = "Jteve Sobs"
+copyright = "Copyright © 2026, Cupertinotes°"
+enableRobotsTXT = true
+disableKinds = ["taxonomy"]
+ignoreErrors = ["error-disable-taxonomy"]
+
+[languages]
+  [languages.id]
+    locale = "id-id"
+
+[permalinks]
+  blog = "/:slug/"
+  tags = "/blog/:slug"
+
+[params]
+  description = "Temukan katalog lengkap produk Apple di Cupertinotes°. Mulai dari iPhone, iPad, Mac, Apple Watch, Apple TV, hingga aksesori dan panduan ahli."
+  title = "Cupertinotes°"
+
+[markup]
+  [markup.highlight]
+    style = "friendly"
+    lineNos = true
+    lineNumbersInTable = false
+    codeFences = true
