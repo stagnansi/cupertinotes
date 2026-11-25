@@ -14,8 +14,8 @@ ignoreErrors = ["error-disable-taxonomy"]
     locale = "id-id"
 
 [permalinks]
-  blog = "/:slug/"
-  tags = "/blog/:slug"
+  newsroom = "/:slug/"
+  tags = "/newsroom/:slug"
 
 [params]
   description = "Temukan katalog lengkap produk Apple di Cupertinotes°. Mulai dari iPhone, iPad, Mac, Apple Watch, Apple TV, hingga aksesori dan panduan ahli."
