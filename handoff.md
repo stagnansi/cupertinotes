@@ -3,7 +3,7 @@
 ## Status Proyek & Git
 - **Repository:** `https://github.com/stagnansi/cupertinotes.git`
 - **Branch aktif lokal:** `master` (tracking `origin/master`)
-- **Commit terakhir sebelumnya:** `bc0646e` ("Put ui-monospace first in font-mono stack and update handoff")
+- **Commit terakhir sebelumnya:** `f2666e0` ("Place IBM Plex Mono before Consolas in font-mono stack and update handoff")
 - **Cloudflare Pages:** Aktif di `https://cupertinotes.pages.dev/` dengan build command `hugo --gc --minify` dan output directory `public`.
 
 ## Keputusan Konten & Struktur
@@ -26,9 +26,9 @@
   - Teks utama & heading: `#1d1d1f`
   - Link (`a` dan `a:visited`): `#0071e3`
 - **Font:**
-  - `--font-main`: `-apple-system, BlinkMacSystemFont, 'Inter', sans-serif` (prioritas font sistem Apple terlebih dahulu, fallback ke `Inter`).
-  - `--font-display`: `-apple-system, BlinkMacSystemFont, 'InterDisplay', 'Inter', sans-serif` untuk judul/heading (`h1`–`h6`, `header .title`, `header .title h2`).
-  - `--font-mono`: `ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Monaco, 'IBM Plex Mono', Consolas, monospace` untuk `time`, `pre`, `code`, `kbd`, `samp` (prioritas `ui-monospace` / font monospace sistem Apple terlebih dahulu, lalu `'IBM Plex Mono'` sebelum `Consolas`).
+  - `--font-main`: `'Inter', -apple-system, BlinkMacSystemFont, sans-serif` (prioritas `Inter` terlebih dahulu, dengan fallback sistem).
+  - `--font-display`: `'InterDisplay', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif` khusus untuk judul/heading (`h1`–`h6`, `header .title`, `header .title h2`).
+  - `--font-mono`: `ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Monaco, 'IBM Plex Mono', Consolas, monospace` untuk `time`, `pre`, `code`, `kbd`, `samp` (dipertahankan sesuai setelan yang sudah pas).
   - `letter-spacing: -0.022em` pada teks/paragraf/blockquote, dengan `margin` dan `border-left: 1px solid #999; padding-left: 20px; font-style: italic;` pada `blockquote` mengacu ke setelan tema `hugo-bearblog` serta `margin-left: 0; margin-right: 0;` agar tidak menjorok ke dalam.
 - **Smooth scroll & back to top:**
   - `html { scroll-behavior: smooth; }` di `custom_head.html` tanpa JavaScript.
