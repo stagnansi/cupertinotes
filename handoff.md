@@ -3,8 +3,8 @@
 ## Status Proyek & Git
 - **Repository:** `https://github.com/stagnansi/cupertinotes.git`
 - **Branch aktif lokal:** `master` (tracking `origin/master`)
-- **Commit terakhir sebelumnya:** `da9224c` ("Differentiate font-mono stack between Apple and Android with @supports and update handoff")
-- **Cloudflare Pages:** Aktif di `https://cupertinotes.pages.dev/` dengan build command `hugo --gc --minify` dan output directory `public`.
+- **Commit terakhir sebelumnya:** `7f192c4` ("Keep IBM Plex Mono first for Android, Apple @supports mono, and update handoff")
+- **Cloudflare Pages:** Aktif di `https://cupertinotes.pages.dev/` dengan build command `hugo --gc --minify` dan output directory `public` (deployment dan verifikasi `<time>` di Android sudah berjalan).
 
 ## Keputusan Konten & Struktur
 - **Homepage (`content/_index.md`):**
@@ -28,7 +28,7 @@
 - **Font:**
   - `--font-main`: `'Inter', -apple-system, BlinkMacSystemFont, sans-serif` (prioritas `Inter` terlebih dahulu, dengan fallback sistem).
   - `--font-display`: `'InterDisplay', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif` khusus untuk judul/heading (`h1`–`h6`, `header .title`, `header .title h2`).
-  - `--font-mono`: `'IBM Plex Mono', ui-monospace, Consolas, monospace` secara bawaan (termasuk di Android), dan diarahkan ke `ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Monaco, monospace` di dalam blok `@supports (-webkit-touch-callout: none)` untuk perangkat Apple (iOS/iPadOS).
+  - `--font-mono`: `'IBM Plex Mono', ui-monospace, Consolas, monospace` secara bawaan (terverifikasi tampil `IBM Plex Mono` di Android), dan diarahkan ke `ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Monaco, monospace` di dalam blok `@supports (-webkit-touch-callout: none)` untuk perangkat Apple (iOS/iPadOS).
   - Elemen `time` memakai `font-family: var(--font-mono); font-style: normal; font-size: 15px;` selaras dengan tema `hugo-bearblog`.
   - `letter-spacing: -0.022em` pada teks/paragraf/blockquote, dengan `margin` dan `border-left: 1px solid #999; padding-left: 20px; font-style: italic;` pada `blockquote` mengacu ke setelan tema `hugo-bearblog` serta `margin-left: 0; margin-right: 0;` agar tidak menjorok ke dalam.
 - **Smooth scroll & back to top:**
@@ -38,4 +38,4 @@
 - **Footer (`layouts/partials/footer.html`):** Format `&copy; 2026,` (warna teks, `2026` dengan `font-feature-settings: 'zero' 1;`), `Cupertinotes°` tebal (warna heading), pemisah `&mdash;` (warna teks dengan `opacity: 0.5`), dan panah atas (`↑`).
 
 ## Langkah Berikutnya
-1. Memantau hasil re-deploy di Cloudflare Pages (`https://cupertinotes.pages.dev/`) setelah `hugo --gc --minify` dijalankan.
+1. Menambah konten artikel atau pembaruan halaman di `Cupertinotes°` serta meninjau tampilan lintas perangkat bila ada penyesuaian lanjutan.
