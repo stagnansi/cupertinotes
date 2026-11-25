@@ -3,7 +3,7 @@
 ## Status Proyek & Git
 - **Repository:** `https://github.com/stagnansi/cupertinotes.git`
 - **Branch aktif lokal:** `master` (tracking `origin/master`)
-- **Commit terakhir sebelumnya:** `83bc426` ("Prioritize Inter and InterDisplay for main and display fonts, update handoff")
+- **Commit terakhir sebelumnya:** `da9224c` ("Differentiate font-mono stack between Apple and Android with @supports and update handoff")
 - **Cloudflare Pages:** Aktif di `https://cupertinotes.pages.dev/` dengan build command `hugo --gc --minify` dan output directory `public`.
 
 ## Keputusan Konten & Struktur
@@ -29,6 +29,7 @@
   - `--font-main`: `'Inter', -apple-system, BlinkMacSystemFont, sans-serif` (prioritas `Inter` terlebih dahulu, dengan fallback sistem).
   - `--font-display`: `'InterDisplay', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif` khusus untuk judul/heading (`h1`–`h6`, `header .title`, `header .title h2`).
   - `--font-mono`: `'IBM Plex Mono', ui-monospace, Consolas, monospace` secara bawaan (termasuk di Android), dan diarahkan ke `ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Monaco, monospace` di dalam blok `@supports (-webkit-touch-callout: none)` untuk perangkat Apple (iOS/iPadOS).
+  - Elemen `time` memakai `font-family: var(--font-mono); font-style: normal; font-size: 15px;` selaras dengan tema `hugo-bearblog`.
   - `letter-spacing: -0.022em` pada teks/paragraf/blockquote, dengan `margin` dan `border-left: 1px solid #999; padding-left: 20px; font-style: italic;` pada `blockquote` mengacu ke setelan tema `hugo-bearblog` serta `margin-left: 0; margin-right: 0;` agar tidak menjorok ke dalam.
 - **Smooth scroll & back to top:**
   - `html { scroll-behavior: smooth; }` di `custom_head.html` tanpa JavaScript.

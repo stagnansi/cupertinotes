@@ -7,7 +7,7 @@
     color-scheme: light only;
     --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-display: 'InterDisplay', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-mono: ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Monaco, 'IBM Plex Mono', Consolas, monospace;
+    --font-mono: 'IBM Plex Mono', ui-monospace, Consolas, monospace;
     --background-color: #ffffff;
     --heading-color: #1d1d1f;
     --text-color: #1d1d1f;
@@ -28,6 +28,11 @@
     html, body, main, section, article, aside, header, footer {
       background-color: #ffffff !important;
       color: #1d1d1f !important;
+    }
+  }
+  @supports (-webkit-touch-callout: none) {
+    :root {
+      --font-mono: ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Monaco, monospace;
     }
   }
   html {
@@ -60,7 +65,12 @@
     color: #1d1d1f;
     letter-spacing: -0.015em;
   }
-  time, pre, code, kbd, samp {
+  time {
+    font-family: var(--font-mono);
+    font-style: normal;
+    font-size: 15px;
+  }
+  pre, code, kbd, samp {
     font-family: var(--font-mono);
   }
   a, a:visited {
