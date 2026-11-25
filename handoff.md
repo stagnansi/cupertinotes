@@ -3,8 +3,8 @@
 ## Status Proyek & Git
 - **Repository:** `https://github.com/stagnansi/cupertinotes.git`
 - **Branch aktif lokal:** `master` (tracking `origin/master`)
-- **Commit terakhir sebelumnya:** `fc2255d` ("Prioritize Apple system fonts, fix newsroom single title, and update handoff")
-- **Cloudflare Pages:** Siap dibuat dengan target domain `https://cupertinotes.pages.dev/`.
+- **Commit terakhir sebelumnya:** `32b14ef` ("Put SF Mono first in monospace stack and update handoff")
+- **Cloudflare Pages:** Aktif di `https://cupertinotes.pages.dev/` dengan build command `hugo --gc --minify` dan output directory `public`.
 
 ## Keputusan Konten & Struktur
 - **Homepage (`content/_index.md`):**
@@ -28,7 +28,8 @@
 - **Font:**
   - `--font-main`: `-apple-system, BlinkMacSystemFont, 'Inter', sans-serif` (prioritas font sistem Apple terlebih dahulu, fallback ke `Inter`).
   - `--font-display`: `-apple-system, BlinkMacSystemFont, 'InterDisplay', 'Inter', sans-serif` untuk judul/heading (`h1`–`h6`, `header .title`, `header .title h2`).
-  - `--font-mono`: `'SF Mono', SFMono-Regular, ui-monospace, Menlo, Monaco, Consolas, 'IBM Plex Mono', monospace` untuk `time`, `pre`, `code`, `kbd`, `samp` (prioritas font monospace sistem Apple terlebih dahulu, fallback ke `IBM Plex Mono`).
+  - `--font-mono`: `'SF Mono', SFMono-Regular, ui-monospace, Menlo, Monaco, Consolas, 'IBM Plex Mono', monospace` untuk `pre`, `code`, `kbd`, `samp`.
+  - Elemen `time` dipisahkan agar menggunakan `var(--font-main)` (font sistem Apple / `Inter`).
   - `letter-spacing: -0.022em` pada teks/paragraf/blockquote, dengan `margin` dan `border-left: 1px solid #999; padding-left: 20px; font-style: italic;` pada `blockquote` mengacu ke setelan tema `hugo-bearblog` serta `margin-left: 0; margin-right: 0;` agar tidak menjorok ke dalam.
 - **Smooth scroll & back to top:**
   - `html { scroll-behavior: smooth; }` di `custom_head.html` tanpa JavaScript.
@@ -37,4 +38,4 @@
 - **Footer (`layouts/partials/footer.html`):** Format `&copy; 2026,` (warna teks, `2026` dengan `font-feature-settings: 'zero' 1;`), `Cupertinotes°` tebal (warna heading), pemisah `&mdash;` (warna teks dengan `opacity: 0.5`), dan panah atas (`↑`).
 
 ## Langkah Berikutnya
-1. Membuat proyek baru di **Cloudflare Pages** terhubung ke `stagnansi/cupertinotes` (branch `master`) dengan build command `hugo --gc --minify` dan output directory `public`.
+1. Memantau hasil re-deploy di Cloudflare Pages (`https://cupertinotes.pages.dev/`) setelah `hugo --gc --minify` dijalankan.
