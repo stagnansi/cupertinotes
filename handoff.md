@@ -3,7 +3,7 @@
 ## Status Proyek & Git
 - **Repository:** `https://github.com/stagnansi/cupertinotes.git`
 - **Branch aktif lokal:** `master` (tracking `origin/master`)
-- **Commit terakhir sebelumnya:** `8650ee0` ("Add App Store Award 2026 post, style refinements, and handoff")
+- **Commit terakhir sebelumnya:** `378ca51` ("Rename blog to newsroom, add About page, and update footer")
 - **Cloudflare Pages:** Siap dibuat dengan target domain `https://cupertinotes.pages.dev/`.
 
 ## Keputusan Konten & Struktur
@@ -17,6 +17,8 @@
   - Berisi profil singkat Cupertinotes° serta bagian **Disclaimer** yang menyatakan bahwa situs ini independen dan tidak berafiliasi secara resmi dengan Apple Inc., serta seluruh merek dagang milik masing-masing pemiliknya.
 - **Urutan Navigasi Utama:**
   - `About` (`weight = 100`) kemudian `Newsroom` (`weight = 200`).
+- **Layout Artikel (`layouts/_default/single.html`):**
+  - Menyesuaikan kondisi tampilan judul (`<h1>`) dan tanggal artikel dari tema agar mendukung `.Type` `"newsroom"` selain `"blog"`.
 
 ## Keputusan Gaya & Tipografi (`layouts/partials/custom_head.html` & `layouts/partials/footer.html`)
 - **Light mode saja:** Dark mode dikunci ke tema terang (`color-scheme: light only`, latar belakang `#ffffff`).
@@ -24,9 +26,9 @@
   - Teks utama & heading: `#1d1d1f`
   - Link (`a` dan `a:visited`): `#0071e3`
 - **Font:**
-  - `Inter` untuk teks utama.
-  - `InterDisplay` khusus untuk judul/heading (`h1`–`h6`, `header .title`, `header .title h2`).
-  - `IBM Plex Mono` untuk `time`, `pre`, `code`, `kbd`, `samp`.
+  - `--font-main`: `-apple-system, BlinkMacSystemFont, 'Inter', sans-serif` (prioritas font sistem Apple terlebih dahulu, fallback ke `Inter`).
+  - `--font-display`: `-apple-system, BlinkMacSystemFont, 'InterDisplay', 'Inter', sans-serif` untuk judul/heading (`h1`–`h6`, `header .title`, `header .title h2`).
+  - `--font-mono`: `'IBM Plex Mono', monospace` untuk `time`, `pre`, `code`, `kbd`, `samp`.
   - `letter-spacing: -0.022em` pada teks/paragraf/blockquote, dengan `margin` dan `border-left: 1px solid #999; padding-left: 20px; font-style: italic;` pada `blockquote` mengacu ke setelan tema `hugo-bearblog` serta `margin-left: 0; margin-right: 0;` agar tidak menjorok ke dalam.
 - **Smooth scroll & back to top:**
   - `html { scroll-behavior: smooth; }` di `custom_head.html` tanpa JavaScript.
