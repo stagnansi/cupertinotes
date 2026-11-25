@@ -3,7 +3,7 @@
 ## Status Proyek & Git
 - **Repository:** `https://github.com/stagnansi/cupertinotes.git`
 - **Branch aktif lokal:** `master` (tracking `origin/master`)
-- **Commit terakhir sebelumnya:** `47a5319` ("Use main system font for time element and update handoff")
+- **Commit terakhir sebelumnya:** `e44728d` ("Use monospace font for time element and update handoff")
 - **Cloudflare Pages:** Aktif di `https://cupertinotes.pages.dev/` dengan build command `hugo --gc --minify` dan output directory `public`.
 
 ## Keputusan Konten & Struktur
@@ -28,7 +28,7 @@
 - **Font:**
   - `--font-main`: `-apple-system, BlinkMacSystemFont, 'Inter', sans-serif` (prioritas font sistem Apple terlebih dahulu, fallback ke `Inter`).
   - `--font-display`: `-apple-system, BlinkMacSystemFont, 'InterDisplay', 'Inter', sans-serif` untuk judul/heading (`h1`–`h6`, `header .title`, `header .title h2`).
-  - `--font-mono`: `'SF Mono', SFMono-Regular, ui-monospace, Menlo, Monaco, Consolas, 'IBM Plex Mono', monospace` untuk `time`, `pre`, `code`, `kbd`, `samp` (prioritas font monospace sistem Apple terlebih dahulu, fallback ke `IBM Plex Mono`).
+  - `--font-mono`: `ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Monaco, Consolas, 'IBM Plex Mono', monospace` untuk `time`, `pre`, `code`, `kbd`, `samp` (prioritas `ui-monospace` / font monospace sistem terlebih dahulu, fallback ke `IBM Plex Mono`).
   - `letter-spacing: -0.022em` pada teks/paragraf/blockquote, dengan `margin` dan `border-left: 1px solid #999; padding-left: 20px; font-style: italic;` pada `blockquote` mengacu ke setelan tema `hugo-bearblog` serta `margin-left: 0; margin-right: 0;` agar tidak menjorok ke dalam.
 - **Smooth scroll & back to top:**
   - `html { scroll-behavior: smooth; }` di `custom_head.html` tanpa JavaScript.
